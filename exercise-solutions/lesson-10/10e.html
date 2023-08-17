@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        color: black;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="
+      gaming();
+      " class="toggle-button js-button">Gaming</button>
+
+    <button onclick="
+      music();
+    " class="toggle-button js-button-2">Music</button>
+
+    <button onclick="
+      const toggleButton = document.querySelector('.js-button-3')
+      if (!toggleButton.classList.contains('is-toggled')) {
+        toggleButton.classList.add('is-toggled');
+      } else {
+        toggleButton.classList.remove('is-toggled');
+      }
+    " class="toggle-button js-button-3">Tech</button>
+ 
+    <script>
+      function gaming() {
+        const toggleButton = document.querySelector('.js-button');
+
+        if (toggleButton.innerText === 'Gaming') {
+          toggleButton.innerHTML = 'Game Over';
+          toggleButton.classList.add('is-toggled');
+        } else {
+          toggleButton.innerHTML = 'Gaming';
+          toggleButton.classList.remove('is-toggled');
+        }
+      }
+
+      function music() {
+        const toggleButton = document.querySelector('.js-button-2');
+
+        if (toggleButton.innerText === 'Music') {
+          toggleButton.innerHTML = 'Music Off';
+          toggleButton.classList.add('is-toggled');
+        } else {
+          toggleButton.innerHTML = 'Music';
+          toggleButton.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>

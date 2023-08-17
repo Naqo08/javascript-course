@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <input placeholder="Input text here" class="js-text-input" 
+      onkeyup="
+        const inputElement = document.querySelector('.js-text-input');
+        document.querySelector('.js-message').innerHTML = inputElement.value;
+      ">
+
+    <p class="js-message"></p> 
+    <script>
+    </script>
+  </body>
+</html>
